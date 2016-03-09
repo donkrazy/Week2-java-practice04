@@ -10,8 +10,15 @@ public class Prob1 {
 		
 		int inputNumber = scanner.nextInt();
 
-		/* 여기에 구현 코드를 작성 합니다. */
-		
+		if(inputNumber%2==0){
+            System.out.println("결과 값:  " + (inputNumber/2)*(inputNumber/2+1));
+        }
+        else if(inputNumber%2==1){
+            System.out.println("결과 값:  " + ((inputNumber+1)/2)*(inputNumber+1)/2);
+        }
+        else{
+            System.out.println("입력 오류");
+        }
 		scanner.close();
 	}
 

@@ -1,22 +1,34 @@
 package prob2;
 
 public class Money {
-	private int amount;
+    private int amount;
     public Money(int amount) {
         this.amount = amount;
     }
     public Money add( Money money ) {
-        //더하기
+        int a = this.amount + money.amount;
+        return new Money(a);
     }
     public Money minus( Money money ) {
-        //빼기
+        int a = this.amount - money.amount;
+        return new Money(a);
     }
     public Money multiply( Money money ) {
-        //곱하기
+        int a = this.amount * money.amount;
+        return new Money(a);
     }
-    public Money devide( Money money ) {
-        //나누기
+    public Money divide( Money money ) {
+        int a = this.amount / money.amount;
+        return new Money(a);
     }
-    
 
+    @Override
+    public boolean equals(Object object) {
+        if(object instanceof Money) {
+            return this.amount == ((Money) object).amount;
+        }
+        else{
+            return super.equals(object);
+        }
+    }
 }
